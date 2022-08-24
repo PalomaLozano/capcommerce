@@ -1,0 +1,19 @@
+<p header>header</p>
+
+<div content>
+  <p>Bucle for</p>
+
+  <div class="grid">
+    <div class="grid-item" *ngFor="let n of nums">
+      <!-- <span>{{ "item" + n }}</span> -->
+      <span
+        [ngClass]="{
+          'red': n > 7
+        }"
+        >{{ "item" + n }}</span
+      >
+    </div>
+  </div>
+</div>
+
+<p footer>footer</p>
