@@ -8,12 +8,25 @@
       <!-- <span>{{ "item" + n }}</span> -->
       <span
         [ngClass]="{
-          'red': n > 7
+          red: n > 7
         }"
         >{{ "item" + n }}</span
       >
     </div>
   </div>
+  <div class="grid">
+    <ng-template  ngFor let-n [ngForOf]="nums">
+      <span class="grid-item"
+        [ngClass]="{
+          red: n > 7
+        }"
+        >{{ "anotherItem" + n }}</span
+      >
+    </ng-template>
+  </div>
 </div>
+
+
+
 
 <p footer>footer</p>
